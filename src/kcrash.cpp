@@ -135,9 +135,10 @@ using DetailsHash = QHash<QByteArray, QByteArray>;
 std::unique_ptr<const DetailsHash> s_tags; // Sentry tags
 std::unique_ptr<const DetailsHash> s_extraData; // Sentry extra data
 std::unique_ptr<const DetailsHash> s_gpuContext; // Sentry gpu context
-std::unique_ptr<char> s_qtPlatform;
+// Mind that qstrdup uses new[] so we also need to delete[], that is why we declare these char[].
+std::unique_ptr<char[]> s_qtPlatform;
 #if HAVE_X11
-std::unique_ptr<char> s_x11Display;
+std::unique_ptr<char[]> s_x11Display;
 #endif
 
 QString bootId()
