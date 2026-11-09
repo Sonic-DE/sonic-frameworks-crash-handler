@@ -2,6 +2,10 @@
 
 Sonic Frameworks Crash Handler catches app crashes in SonicDE and hands them to the crash reporter, so problems can be reported and fixed.
 
+## 6.31.0.1 (2026-11-10)
+
+- Behind the scenes: repository tidying.
+
 ## 6.31.0 (2026-10-20)
 
 - Behind the scenes: version update.
